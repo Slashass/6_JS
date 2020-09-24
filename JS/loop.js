@@ -42,3 +42,6 @@ for (let i=0; i<text.length; i++) {
     console.log(i, atbulas);
 }
 console.log(text, '->', atbulas);
+
+console.clear();
+
