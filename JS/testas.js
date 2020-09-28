@@ -18,15 +18,19 @@ const phoneMemorySize = 70;
 
 function kiekTilpsAppsu(memory, list) {
     let usedSpace = 0;
+    let installedAppsCount = 0;
     const appCount = list.length;
 
     for (let i=0; i<appCount; i++) {
         const appSizee = list[i];
         usedSpace += appSizee;
-        console.log(appSizee, usedSpace);
+        if (usedSpace <= memory) {
+            installedAppsCount++;
+            console.log(appSizee, usedSpace);
+        }
     }
 
-    return 0;
+    return installedAppsCount;
 }
 
 const phoneAppCount = kiekTilpsAppsu(phoneMemorySize, appSize);
